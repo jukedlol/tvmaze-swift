@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5Mm-Jy-asM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Input View Controller-->
+        <scene sceneID="tHc-Hw-DvG">
+            <objects>
+                <viewController id="5Mm-Jy-asM" customClass="SearchInputViewController" customModule="TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N5J-hc-nIp"/>
+                        <viewControllerLayoutGuide type="bottom" id="UBQ-68-KSB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v2O-7L-39g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="UPC-l9-Exh">
+                                <rect key="frame" x="8" y="11" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UPC-l9-Exh" secondAttribute="height" multiplier="1:1" id="ei8-rz-cnl"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kj5-Dg-cTJ">
+                                <rect key="frame" x="38" y="0.0" width="329" height="44"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="search"/>
+                                <connections>
+                                    <action selector="textFieldEditingChanged:" destination="5Mm-Jy-asM" eventType="editingChanged" id="4Ep-qy-1EA"/>
+                                    <action selector="textFieldPrimaryAction:" destination="5Mm-Jy-asM" eventType="primaryActionTriggered" id="kli-oI-OoV"/>
+                                </connections>
+                            </textField>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Gum-bb-g4K">
+                                <rect key="frame" x="339" y="12" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-bz-P1M">
+                                <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="G3g-9X-BhV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UPC-l9-Exh" firstAttribute="height" secondItem="v2O-7L-39g" secondAttribute="height" multiplier="0.5" id="Ab9-Lw-tjO"/>
+                            <constraint firstItem="UPC-l9-Exh" firstAttribute="leading" secondItem="v2O-7L-39g" secondAttribute="leading" constant="8" id="LtI-xe-SXU"/>
+                            <constraint firstItem="kj5-Dg-cTJ" firstAttribute="height" secondItem="v2O-7L-39g" secondAttribute="height" id="Si7-3J-exT"/>
+                            <constraint firstItem="kj5-Dg-cTJ" firstAttribute="centerY" secondItem="v2O-7L-39g" secondAttribute="centerY" id="YWj-aa-sXy"/>
+                            <constraint firstItem="zWn-bz-P1M" firstAttribute="centerX" secondItem="v2O-7L-39g" secondAttribute="centerX" id="bQd-w8-a9v"/>
+                            <constraint firstItem="kj5-Dg-cTJ" firstAttribute="leading" secondItem="UPC-l9-Exh" secondAttribute="trailing" constant="8" id="bRO-ch-wqG"/>
+                            <constraint firstAttribute="trailing" secondItem="kj5-Dg-cTJ" secondAttribute="trailing" constant="8" id="i7J-Dq-sOc"/>
+                            <constraint firstItem="UPC-l9-Exh" firstAttribute="centerY" secondItem="v2O-7L-39g" secondAttribute="centerY" id="kB8-ik-RUi"/>
+                            <constraint firstItem="zWn-bz-P1M" firstAttribute="width" secondItem="v2O-7L-39g" secondAttribute="width" id="oAC-yM-6gz"/>
+                            <constraint firstItem="UBQ-68-KSB" firstAttribute="top" secondItem="zWn-bz-P1M" secondAttribute="bottom" id="zCj-ge-vI0"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="375" height="44"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="Gum-bb-g4K" id="quN-T9-APV"/>
+                        <outlet property="textField" destination="kj5-Dg-cTJ" id="7PD-bk-ES9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3g-BR-NJj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="-57"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="search" width="23" height="24"/>
+    </resources>
+</document>

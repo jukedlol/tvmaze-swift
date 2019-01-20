@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KFM-ld-YFl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details Result View Controller-->
+        <scene sceneID="w6R-ev-DX2">
+            <objects>
+                <viewController id="KFM-ld-YFl" customClass="DetailsResultViewController" customModule="TV" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kGS-y6-9Ho">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RE4-U7-cqG">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="KFM-ld-YFl" id="KoS-Ea-EBM"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RE4-U7-cqG" firstAttribute="width" secondItem="kGS-y6-9Ho" secondAttribute="width" id="3fi-25-klq"/>
+                            <constraint firstItem="RE4-U7-cqG" firstAttribute="centerY" secondItem="qHR-78-k9d" secondAttribute="centerY" id="8nX-S6-Uri"/>
+                            <constraint firstItem="RE4-U7-cqG" firstAttribute="centerX" secondItem="qHR-78-k9d" secondAttribute="centerX" id="aHt-LS-0F5"/>
+                            <constraint firstItem="RE4-U7-cqG" firstAttribute="height" secondItem="kGS-y6-9Ho" secondAttribute="height" id="lbw-sh-4D9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qHR-78-k9d"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RE4-U7-cqG" id="596-fz-VBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LBK-SC-WmQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-134" y="-61"/>
+        </scene>
+    </scenes>
+</document>

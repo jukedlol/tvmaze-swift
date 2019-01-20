@@ -1,0 +1,36 @@
+PODS:
+  - Either (2.0.0):
+    - Prelude (~> 3.0.0)
+  - Nuke (7.5.2)
+  - Prelude (3.0.0)
+  - ReSwift (4.0.1)
+
+DEPENDENCIES:
+  - Either (from `https://github.com/robrix/Either`)
+  - Nuke (~> 7.0)
+  - ReSwift (~> 4.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Nuke
+    - Prelude
+    - ReSwift
+
+EXTERNAL SOURCES:
+  Either:
+    :git: https://github.com/robrix/Either
+
+CHECKOUT OPTIONS:
+  Either:
+    :commit: 76ee756db70767e27a038cbcdb658876d01fd4d8
+    :git: https://github.com/robrix/Either
+
+SPEC CHECKSUMS:
+  Either: 6cb836eaee476ad16f1012f130fd94770e5853f0
+  Nuke: 0350d346a688426e8f2331253ef28dc2fc4f6178
+  Prelude: fe4cc0fd961d34edf48fe6b04d05c863449efb0a
+  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
+
+PODFILE CHECKSUM: 4212ca309a7a2985460431740ad5ac1762fa2a96
+
+COCOAPODS: 1.5.3
